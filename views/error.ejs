@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title || 'Error - Hanoi Re' %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <%- include('partials/header') %>
+  
+  <main>
+    <section class="error-page">
+      <div class="container">
+        <div class="error-content">
+          <div class="error-image">
+            <div class="error-404">
+              <h1>Error <%= errorCode %></h1>
+            </div>
+          </div>
+          
+          <div class="error-details">
+            <h2>Error <%= errorCode %></h2>
+            <p class="error-message"><%= message %></p>
+            
+            <% if (contactInfo) { %>
+            <div class="contact-support">
+              <h3>Vui lòng liên hệ với bộ phận hỗ trợ:</h3>
+              <ul>
+                <li>Email: <%= contactInfo.email %></li>
+                <li>Điện thoại: <%= contactInfo.phone %></li>
+                <li>Website: <%= contactInfo.website %></li>
+              </ul>
+            </div>
+            <% } %>
+            
+            <div class="error-actions">
+              <a href="/" class="btn btn-primary">Back to home</a>
+              <a href="/contact" class="btn btn-secondary">Contact Support</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <%- include('partials/footer') %>
+</body>
+</html>
