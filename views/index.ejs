@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title || 'Hanoi Re' %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <%- include('partials/header') %>
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h2>The Leading Reinsurer in Vietnam</h2>
+          <p>Hanoi Re (formerly known as PVI Re), established in 2011, is one of the leading reinsurance companies in Vietnam. Our reputation as a professional and reliable partner is built on our commitment to delivering superior insurance solutions and risk engineering services to our valued customers.</p>
+          <a href="#products" class="btn btn-primary">Explore</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+      <div class="container">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-content">
+              <h3>Facultative Reinsurance</h3>
+              <p>Hanoi Re offers comprehensive, tailored insurance solutions based on market expertise. With end-to-end support, we ensure solutions align with clients' financial capacities and meets clients' specific needs.</p>
+              <a href="/facultative-reinsurance" class="btn btn-secondary">Explore</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-content">
+              <h3>Treaty Reinsurance</h3>
+              <p>Hanoi Re provides a broad spectrum of treaty reinsurance coverage on both proportional and non-proportional basis. As a trusted reinsurance provider in Vietnam, we prioritize safety and cost-effectiveness.</p>
+              <a href="/treaty-reinsurance" class="btn btn-secondary">Explore</a>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-content">
+              <h3>Risk Engineering Services</h3>
+              <p>With our extensive knowledge of the local and international markets, Hanoi Re prioritizes delivering diverse value-added solutions to our clients.</p>
+              <a href="/risk-engineering-services" class="btn btn-secondary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Finance Section -->
+    <section class="finance-section">
+      <div class="container">
+        <h2>Finance</h2>
+        <div class="finance-grid">
+          <div class="finance-card">
+            <div class="finance-content">
+              <h3>Highlight</h3>
+              <p>Hanoi Re is committed to sustainable growth and delivering the best value for shareholders and customers.</p>
+              <a href="/financial-highlights" class="btn btn-outline">See more</a>
+            </div>
+          </div>
+          <div class="finance-card">
+            <div class="finance-content">
+              <h3>Credit Rating</h3>
+              <p>AM Best has affirmed the Financial Strength Rating of B++ (Good) outlook. The ratings reflect PVI Re's balance sheet strength, which AM Best assesses as strong.</p>
+              <a href="/ratings" class="btn btn-outline">See more</a>
+            </div>
+          </div>
+          <div class="finance-card">
+            <div class="finance-content">
+              <h3>Investor</h3>
+              <p>Our primary objective is to establish ourselves as the preferred reinsurer, continuously enhancing our financial stability and delivering value to our shareholders.</p>
+              <a href="/general-meeting-shareholders" class="btn btn-outline">See more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+      <div class="container">
+        <h2>News</h2>
+        <div class="news-container">
+          <div class="news-category">
+            <h3>Hanoi Re News</h3>
+            <div class="news-grid">
+              <article class="news-item">
+                <h4>Hanoi Re (PRE) continues to be honored for information disclosure compliance at IR AWARDS 2025</h4>
+                <p class="news-date">02-07-2025</p>
+                <a href="/hanoi-re-news" class="news-link">Read more</a>
+              </article>
+              <article class="news-item">
+                <h4>Hanoi Re Joins Talanx Cup 2025 – Strengthening the Global Ecosystem</h4>
+                <p class="news-date">19-06-2025</p>
+                <a href="/hanoi-re-news" class="news-link">Read more</a>
+              </article>
+              <article class="news-item">
+                <h4>Affirming International Standing: Hanoi Re Organizes Technical Risk Assessment and Training for Coal-Fired Power Plant in Cambodia</h4>
+                <p class="news-date">04-06-2025</p>
+                <a href="/hanoi-re-news" class="news-link">Read more</a>
+              </article>
+            </div>
+            <a href="/hanoi-re-news" class="btn btn-secondary">Explore All News</a>
+          </div>
+          
+          <div class="news-category">
+            <h3>Insurance Market News</h3>
+            <div class="news-grid">
+              <article class="news-item">
+                <h4>PVI FOOTBALL TEAM READY TO CONQUER THE TALANX CUP 2025</h4>
+                <p class="news-date">11-06-2025</p>
+                <a href="/insurance-market-news" class="news-link">Read more</a>
+              </article>
+              <article class="news-item">
+                <h4>Reinsurance and the Need for Adaptability</h4>
+                <p class="news-date">06-06-2025</p>
+                <a href="/insurance-market-news" class="news-link">Read more</a>
+              </article>
+              <article class="news-item">
+                <h4>HDI Global posts improved CoR of 91.1% in Q1'25</h4>
+                <p class="news-date">25-05-2025</p>
+                <a href="/insurance-market-news" class="news-link">Read more</a>
+              </article>
+            </div>
+            <a href="/insurance-market-news" class="btn btn-secondary">Explore Market News</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <%- include('partials/footer') %>
+</body>
+</html>
