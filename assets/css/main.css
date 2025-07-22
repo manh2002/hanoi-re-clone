@@ -1,0 +1,332 @@
+/* 
+ * STYLESHEET CHÍNH CHO DỰ ÁN
+ * File này chứa tất cả các style cơ bản cho website
+ * Được thiết kế đơn giản để intern dễ hiểu và chỉnh sửa
+ */
+
+/* ===== RESET VÀ CÀI ĐẶT CƠ BẢN ===== */
+/* Xóa margin và padding mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Tính toán kích thước bao gồm cả border và padding */
+}
+
+/* Cài đặt font và màu sắc cơ bản cho toàn bộ trang */
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Font chữ hiện đại, dễ đọc */
+    line-height: 1.6; /* Khoảng cách dòng để dễ đọc */
+    color: #333; /* Màu chữ xám đậm */
+    background-color: #f8fafc; /* Màu nền xám nhạt */
+    min-height: 100vh; /* Chiều cao tối thiểu bằng chiều cao màn hình */
+}
+
+/* ===== CONTAINER CHÍNH ===== */
+/* Khung chứa nội dung chính, giới hạn độ rộng và căn giữa */
+.container {
+    max-width: 1200px; /* Độ rộng tối đa */
+    margin: 0 auto; /* Căn giữa trang */
+    padding: 20px; /* Khoảng cách bên trong */
+}
+
+/* ===== HEADER (PHẦN ĐẦU TRANG) ===== */
+.site-header {
+    background: white; /* Nền trắng */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    position: sticky; /* Dính ở đầu trang khi cuộn */
+    top: 0;
+    z-index: 100; /* Hiển thị trên các phần tử khác */
+}
+
+.header-content {
+    display: flex; /* Sắp xếp theo hàng ngang */
+    justify-content: space-between; /* Căn đều hai đầu */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 1rem 0; /* Khoảng cách trên dưới */
+}
+
+/* Logo của website */
+.logo a {
+    font-size: 1.8rem; /* Kích thước chữ lớn */
+    font-weight: 700; /* Chữ đậm */
+    color: #1f2937; /* Màu xám đậm */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+/* ===== NAVIGATION (MENU ĐIỀU HƯỚNG) ===== */
+.main-nav ul {
+    display: flex; /* Sắp xếp menu theo hàng ngang */
+    list-style: none; /* Bỏ dấu chấm đầu dòng */
+    gap: 2rem; /* Khoảng cách giữa các mục menu */
+}
+
+.nav-link {
+    color: #4b5563; /* Màu xám */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-weight: 500; /* Chữ hơi đậm */
+    padding: 0.5rem 1rem; /* Khoảng cách bên trong */
+    border-radius: 6px; /* Bo góc */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt */
+}
+
+/* Hiệu ứng khi hover (di chuột qua) menu */
+.nav-link:hover {
+    background-color: #f3f4f6; /* Nền xám nhạt */
+    color: #1f2937; /* Chữ đậm hơn */
+}
+
+/* ===== MAIN CONTENT (NỘI DUNG CHÍNH) ===== */
+.main {
+    margin: 2rem 0; /* Khoảng cách trên dưới */
+}
+
+/* ===== CARDS (THẺ HIỂN THỊ) ===== */
+.card {
+    background: white; /* Nền trắng */
+    border-radius: 12px; /* Bo góc */
+    padding: 2rem; /* Khoảng cách bên trong */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    margin-bottom: 2rem; /* Khoảng cách dưới */
+}
+
+.card h2 {
+    font-size: 1.5rem; /* Kích thước tiêu đề */
+    font-weight: 600; /* Chữ đậm */
+    color: #1f2937; /* Màu xám đậm */
+    margin-bottom: 1.5rem; /* Khoảng cách dưới */
+}
+
+/* ===== FORMS (BIỂU MẪU) ===== */
+.form {
+    display: flex;
+    flex-direction: column; /* Sắp xếp theo cột dọc */
+    gap: 1.5rem; /* Khoảng cách giữa các phần tử */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Sắp xếp label và input theo cột */
+    gap: 0.5rem; /* Khoảng cách nhỏ */
+}
+
+.form-group label {
+    font-weight: 500; /* Chữ hơi đậm */
+    color: #374151; /* Màu xám */
+    font-size: 0.9rem; /* Kích thước chữ nhỏ hơn */
+}
+
+/* Style cho input, textarea, select */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 0.75rem; /* Khoảng cách bên trong */
+    border: 2px solid #e5e7eb; /* Viền xám nhạt */
+    border-radius: 8px; /* Bo góc */
+    font-size: 1rem; /* Kích thước chữ */
+    font-family: inherit; /* Kế thừa font từ body */
+    transition: border-color 0.3s ease; /* Hiệu ứng chuyển đổi viền */
+}
+
+/* Hiệu ứng khi focus (click vào) input */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none; /* Bỏ viền mặc định */
+    border-color: #3b82f6; /* Viền xanh */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); /* Đổ bóng xanh nhạt */
+}
+
+/* ===== BUTTONS (NÚT BẤM) ===== */
+.btn {
+    padding: 0.75rem 1.5rem; /* Khoảng cách bên trong */
+    border: none; /* Bỏ viền */
+    border-radius: 8px; /* Bo góc */
+    font-size: 1rem; /* Kích thước chữ */
+    font-weight: 500; /* Chữ hơi đậm */
+    cursor: pointer; /* Con trỏ chuột dạng bàn tay */
+    text-decoration: none; /* Bỏ gạch chân nếu là link */
+    display: inline-flex; /* Hiển thị dạng flex inline */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt */
+}
+
+/* Nút chính (màu xanh) */
+.btn-primary {
+    background-color: #3b82f6; /* Nền xanh */
+    color: white; /* Chữ trắng */
+}
+
+.btn-primary:hover {
+    background-color: #2563eb; /* Xanh đậm hơn khi hover */
+    transform: translateY(-1px); /* Nâng lên 1px */
+}
+
+/* Nút phụ (màu xám) */
+.btn-secondary {
+    background-color: #6b7280; /* Nền xám */
+    color: white; /* Chữ trắng */
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563; /* Xám đậm hơn khi hover */
+    transform: translateY(-1px); /* Nâng lên 1px */
+}
+
+/* ===== HERO SECTION (PHẦN GIỚI THIỆU CHÍNH) ===== */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradient tím xanh */
+    color: white; /* Chữ trắng */
+    text-align: center; /* Căn giữa */
+    padding: 4rem 2rem; /* Khoảng cách lớn */
+    border-radius: 12px; /* Bo góc */
+    margin-bottom: 3rem; /* Khoảng cách dưới */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Tiêu đề lớn */
+    font-weight: 700; /* Chữ rất đậm */
+    margin-bottom: 1rem; /* Khoảng cách dưới */
+}
+
+.hero p {
+    font-size: 1.2rem; /* Chữ hơi lớn */
+    margin-bottom: 2rem; /* Khoảng cách dưới */
+    max-width: 600px; /* Giới hạn độ rộng */
+    margin-left: auto; /* Căn giữa */
+    margin-right: auto; /* Căn giữa */
+}
+
+/* ===== GRID LAYOUT (BỐ CỤC LƯỚI) ===== */
+.grid {
+    display: grid; /* Sử dụng CSS Grid */
+    gap: 2rem; /* Khoảng cách giữa các ô */
+}
+
+/* Grid 2 cột */
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột bằng nhau */
+}
+
+/* Grid 3 cột */
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
+}
+
+/* ===== FOOTER (PHẦN CUỐI TRANG) ===== */
+.site-footer {
+    background: #1f2937; /* Nền xám đậm */
+    color: white; /* Chữ trắng */
+    padding: 3rem 0 1rem; /* Khoảng cách trên dưới */
+    margin-top: 4rem; /* Khoảng cách trên */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cột tự động */
+    gap: 2rem; /* Khoảng cách */
+    margin-bottom: 2rem; /* Khoảng cách dưới */
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem; /* Khoảng cách dưới tiêu đề */
+    color: #f9fafb; /* Màu trắng nhạt */
+}
+
+.footer-section ul {
+    list-style: none; /* Bỏ dấu chấm */
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem; /* Khoảng cách giữa các mục */
+}
+
+.footer-section a {
+    color: #d1d5db; /* Màu xám nhạt */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.footer-section a:hover {
+    color: white; /* Trắng khi hover */
+}
+
+.footer-bottom {
+    text-align: center; /* Căn giữa */
+    padding-top: 2rem; /* Khoảng cách trên */
+    border-top: 1px solid #374151; /* Đường viền trên */
+    color: #9ca3af; /* Màu xám nhạt */
+}
+
+/* ===== RESPONSIVE DESIGN (THIẾT KẾ RESPONSIVE) ===== */
+/* Màn hình tablet và nhỏ hơn */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Giảm padding */
+    }
+    
+    .header-content {
+        flex-direction: column; /* Sắp xếp theo cột */
+        gap: 1rem; /* Khoảng cách */
+    }
+    
+    .main-nav ul {
+        flex-direction: column; /* Menu theo cột */
+        text-align: center; /* Căn giữa */
+    }
+    
+    .hero h1 {
+        font-size: 2rem; /* Giảm kích thước tiêu đề */
+    }
+    
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr; /* Chuyển thành 1 cột */
+    }
+}
+
+/* Màn hình điện thoại */
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 1rem; /* Giảm padding */
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem; /* Tiêu đề nhỏ hơn */
+    }
+    
+    .card {
+        padding: 1.5rem; /* Giảm padding card */
+    }
+}
+
+/* ===== UTILITY CLASSES (LỚP TIỆN ÍCH) ===== */
+.hidden {
+    display: none !important; /* Ẩn phần tử */
+}
+
+.text-center {
+    text-align: center; /* Căn giữa chữ */
+}
+
+.mt-1 { margin-top: 0.5rem; } /* Margin top nhỏ */
+.mt-2 { margin-top: 1rem; }   /* Margin top vừa */
+.mb-1 { margin-bottom: 0.5rem; } /* Margin bottom nhỏ */
+.mb-2 { margin-bottom: 1rem; }   /* Margin bottom vừa */
+
+/* ===== ANIMATIONS (HIỆU ỨNG ĐỘNG) ===== */
+/* Hiệu ứng fade in cho các phần tử mới */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Bắt đầu trong suốt */
+        transform: translateY(10px); /* Dịch chuyển xuống */
+    }
+    to {
+        opacity: 1; /* Kết thúc hiển thị */
+        transform: translateY(0); /* Về vị trí ban đầu */
+    }
+}
